@@ -4,12 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/common.css">
     <title>Home</title>
 </head>
 
 <body>
-    <h1>Welcome to Flask</h1>
-    <p>This is the home page of our Flask application</p>
+    <div class="container">
+        <header class="header">
+            <div class="leftside">
+                <h1>Welcome to Flask</h1>
+                <p>This is the home page of our Flask application</p>
+            </div>
+            <div class="rightside">
+                <ul class="menu">
+                    <ol><a href="/" style="text-decoration: none;">Main</a></ol>
+                    <ol><a href="/about" style="text-decoration: none;">About</a></ol>
+                    <ol><a href="/contact" style="text-decoration: none;">Contact</a></ol>
+                </ul>
+            </div>
+        </header>
+        <div class="field">
+            <img src="{{url_for('static', filename='images/css_funny.jpeg')}}" alt="Example Image" class="image">
+            <ul>
+                <li>Красный</li>
+                <li>Зеленый</li>
+                <li>Желтый</li>
+                <li>Синий</li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>

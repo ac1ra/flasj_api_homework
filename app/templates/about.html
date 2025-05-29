@@ -4,12 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>About</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/common.css')}}">
 </head>
 
 <body>
-    <h1>About Us</h1>
-    <p>This page provides information about our Flask application</p>
+
+    <div class="container">
+        <header class="header">
+            <div class="leftside">
+                <h1>About Us</h1>
+                <p>This page provides information about our Flask application</p>
+            </div>
+            <div class="rightside">
+                <ul class="menu">
+                    <ol><a href="/" style="text-decoration: none;">Main</a></ol>
+                    <ol><a href="/about" style="text-decoration: none;">About</a></ol>
+                    <ol><a href="/contact" style="text-decoration: none;">Contact</a></ol>
+                </ul>
+            </div>
+        </header>
+    </div>
 </body>
 
 </html>

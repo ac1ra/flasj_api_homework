@@ -1,11 +1,11 @@
 from flask import render_template, request,redirect,url_for
 from app import app
 
-@app.run("/")
+@app.route("/")
 def form():
     return render_template("form.html")
 
-@app.run("/submit")
+@app.route("/submit")
 def submit():
     if request.method =="POST":
         name = request.form.get("name")

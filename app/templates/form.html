@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>Enter Your Details</h1>
-    <form action="/submit" method="POST">
-        <label for="name">Name:</label>
+<h1 class="funny-title">😄 Enter Your Details! 🦄</h1>
+    <form action="/submit" method="POST" class="funny-form">
+        <label for="name">Ваше имя:</label>
         <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Email:</label>
+        <label for="email">Ваш email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
-        <button type="submit">Submit</button>
+        <label for="color">Любимый цвет:</label>
+        <select id="color" name="color">
+            <option value="blue">Синий</option>
+            <option value="red">Красный</option>
+            <option value="green">Зеленый</option>
+        </select>
+        <br><br>
+        <label for="profession">Профессия:</label>
+        <select id="profession" name="profession">
+            <option value="разработчик">разработчик</option>
+            <option value="инженер">инженер</option>
+            <option value="менеджер">менеджер</option>
+        </select> <br><br>
+        <p>Ваши увлечения:</p>
+        <label><input type="checkbox" name="hobbies" value="книги">книги</label>
+        <label><input type="checkbox" name="hobbies" value="спорт">спорт</label>
+        <label><input type="checkbox" name="hobbies" value="игры">игры</label><br>
+        <p>Ваш уровень:</p>
+        <label><input type="radio" name="level" value="Начинающий">Начинающий</label>
+        <label><input type="radio" name="level" value="Продвинутый">Продвинутый</label>
+        <br><br>
+        <button type="submit" class="funny-button">🚀 Let's Go!</button>
+
     </form>
+    <footer>
+        <form action="/secret" method="POST">
+            <button type="secret" class="secret-button">   Catch me!   </button>
+        </form>
+    </footer>
 </body>
 </html>

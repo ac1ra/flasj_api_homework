@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submission Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body>
-    <h1>Submission Successful</h1>
-    <p>Thank you, <strong>{{ name }}</strong>!</p>
-    <p>We have sent a confirmation to <strong>{{ email }}</strong>.</p>
-    <a href="/">Go back to form</a>
+<body style="background-color: {{color}};">
+    <div class="funny-form">
+        <h1>Submission Successful</h1>
+        <p>Спасибо, <strong>{{ name }}</strong>!</p>
+        <p>We have sent a confirmation to <strong>{{ email }}</strong>.</p>
+        <p> Ваш любимый цвет на <strong>фоне</strong>.</p>
+        <p>Ваша профессия: <strong>{{ profession }}.</strong></p>
+        <p>Ваши увлечения: <strong>{{ hobbies | join(', ') }}.</strong></p>
+        <p>Вы - <strong>{{ level }}.</strong></p>
+        <a href="/">Назад</a>
+    </div>
 </body>
 </html>

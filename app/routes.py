@@ -5,7 +5,7 @@ from app import app
 def form():
     return render_template("form.html")
 
-@app.route("/submit")
+@app.route("/submit",methods =["POST","GET"])
 def submit():
     if request.method =="POST":
         name = request.form.get("name")
